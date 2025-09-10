@@ -3,93 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Của Tôi</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-        .header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
-            padding: 2rem;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        .content {
-            margin-bottom: 2rem;
-        }
-        .button {
-            display: inline-block;
-            background: #5cb85c;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        .button:hover {
-            background: #4cae4c;
-        }
-        .footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #333;
-            color: #fff;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Portfolio của bạn</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <header class="header">
-        <h1>Chào mừng đến với trang web của tôi</h1>
+        <nav class="navbar">
+            <a href="#about" class="nav-item">Giới thiệu</a>
+            <a href="#skills" class="nav-item">Kỹ năng</a>
+            <a href="#projects" class="nav-item">Dự án</a>
+            <a href="#contact" class="nav-item">Liên hệ</a>
+        </nav>
     </header>
 
-    <div class="container">
-        <section class="content">
-            <h2>Giới thiệu chung</h2>
-            <p>
-                Đây là một trang web đơn giản được tạo ra để minh họa cách một trang HTML cơ bản hoạt động. Nó bao gồm các thành phần phổ biến như tiêu đề, đoạn văn bản, và một nút bấm. Tất cả đều được định dạng bằng CSS để trông dễ nhìn hơn.
-            </p>
+    <main class="container">
+        <section id="about" class="section about-me">
+            <div class="profile-pic">
+                <img src="images/avatar.jpg" alt="Ảnh đại diện của bạn">
+            </div>
+            <div class="profile-info">
+                <h1>Chào, tôi là [Tên của bạn]</h1>
+                <p>Tôi là một [Chức danh: Ví dụ: Software Developer, Data Scientist,...] với kinh nghiệm trong [Lĩnh vực chính: Ví dụ: Web Development, Machine Learning,...].</p>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:youremail@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
         </section>
 
-        <section class="content">
-            <h2>Một vài điều thú vị</h2>
-            <p id="dynamic-text">
-                Hãy nhấn nút bên dưới để xem một thông điệp mới.
-            </p>
-            <a href="#" class="button" onclick="changeText()">Nhấn vào đây</a>
+        <section id="skills" class="section skills">
+            <h2>Kỹ năng & Công nghệ</h2>
+            <div class="skills-list">
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">React</span>
+                <span class="skill-item">Node.js</span>
+            </div>
         </section>
-    </div>
+
+        <section id="projects" class="section projects">
+            <h2>Dự án</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="images/project1.png" alt="Dự án 1">
+                    <h3>Dự án Web App</h3>
+                    <p>Một ứng dụng web được xây dựng với React và Node.js.</p>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2.png" alt="Dự án 2">
+                    <h3>Dự án Machine Learning</h3>
+                    <p>Mô hình dự đoán sử dụng Python và scikit-learn.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="section contact">
+            <h2>Liên hệ</h2>
+            <p>Bạn có thể liên hệ với tôi qua email hoặc LinkedIn.</p>
+            <p>Email: youremail@example.com</p>
+            <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        </section>
+    </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Trang Web Của Tôi</p>
+        <p>&copy; 2024 Portfolio của bạn</p>
     </footer>
-
-    <script>
-        function changeText() {
-            const texts = [
-                "Lập trình thật thú vị!",
-                "Chào bạn, ngày mới tốt lành nhé!",
-                "Đây là một trang web đơn giản nhưng mạnh mẽ."
-            ];
-            const randomIndex = Math.floor(Math.random() * texts.length);
-            document.getElementById('dynamic-text').innerText = texts[randomIndex];
-        }
-    </script>
-
+    
 </body>
 </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Của Tôi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .content {
+            margin-bottom: 2rem;
+        }
+        .button {
+            display: inline-block;
+            background: #5cb85c;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background: #4cae4c;
+        }
+        .footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Chào mừng đến với trang web của tôi</h1>
+    </header>
+
+    <div class="container">
+        <section class="content">
+            <h2>Giới thiệu chung</h2>
+            <p>
+                Đây là một trang web đơn giản được tạo ra để minh họa cách một trang HTML cơ bản hoạt động. Nó bao gồm các thành phần phổ biến như tiêu đề, đoạn văn bản, và một nút bấm. Tất cả đều được định dạng bằng CSS để trông dễ nhìn hơn.
+            </p>
+        </section>
+
+        <section class="content">
+            <h2>Một vài điều thú vị</h2>
+            <p id="dynamic-text">
+                Hãy nhấn nút bên dưới để xem một thông điệp mới.
+            </p>
+            <a href="#" class="button" onclick="changeText()">Nhấn vào đây</a>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Trang Web Của Tôi</p>
+    </footer>
+
+    <script>
+        function changeText() {
+            const texts = [
+                "Lập trình thật thú vị!",
+                "Chào bạn, ngày mới tốt lành nhé!",
+                "Đây là một trang web đơn giản nhưng mạnh mẽ."
+            ];
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            document.getElementById('dynamic-text').innerText = texts[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
